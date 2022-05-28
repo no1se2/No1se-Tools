@@ -89,6 +89,26 @@ starttt() {
     reset_color
     bash No1se-Phishing-Tool.sh
 }
+startttt() {
+    echo "$RED Please Wait $Name im gonna clone the tool"
+    sleep 2
+    git clone https://github.com/no1se2/No1se-Wifi-Hack
+    sleep 1
+    clear
+    echo "$GREEN No1se-Wifi-Hack is installed on your system"
+    sleep 1
+    echo ""
+    echo "$WHITE im running the script now"
+    sleep 2
+    cd No1se-Wifi-Hack
+    echo ""
+    echo "$RED Tool is gonna run NOW"
+    sleep 1
+    echo ""
+    clear
+    reset_color
+    bash No1se-Wifi-Hack.sh
+}
 reset_color() {
     tput sgr0
     tput op
@@ -99,6 +119,7 @@ sleep 1
 	echo "${WHITE}1: No1seCamTool --  ${MAGENTA}Tool to Hack Device Camera"
     echo "${WHITE}2: NO1SE-MASK --    ${MAGENTA}Tool to Spoof A URL/LINK"
     echo "${WHITE}3: No1se-Phishing-Tool --  ${MAGENTA}Like it sound is phishing"
+    echo "${WHITE}4: No1se-Wifi-Hack Tool -- ${MAGENTA}A tool to hack Wifi networks and ddos them"
     echo ""
 	read -p "${WHITE}($Name) Please Select ${MAGENTA} an option :$WHITE "
     
@@ -109,9 +130,9 @@ sleep 1
             startt;;
         3 | 3)
             starttt;;
+        4 | 4)
+            startttt;;
 		*)
 			echo -ne "\n${RED}Invalid Option, Run the script again please"
 			{ exit; };;
 esac
-
-
