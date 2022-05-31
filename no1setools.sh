@@ -109,6 +109,26 @@ startttt() {
     reset_color
     bash No1se-Wifi-Hack.sh
 }
+starttttt() {
+    echo "$RED Please Wait $Name im gonna clone the tool"
+    sleep 2
+    git clone https://github.com/no1se2/No1se-User-Finder
+    sleep 1
+    clear
+    echo "$GREEN No1se-User-Finder is installed on your system"
+    sleep 1
+    echo ""
+    echo "$WHITE im running the script now"
+    sleep 2
+    cd No1se-User-Finder
+    echo ""
+    echo "$RED Tool is gonna run NOW"
+    sleep 1
+    echo ""
+    clear
+    reset_color
+    bash No1se-User-Finder.sh
+}
 reset_color() {
     tput sgr0
     tput op
@@ -120,6 +140,7 @@ sleep 1
     echo "${WHITE}2: NO1SE-MASK --    ${MAGENTA}Tool to Spoof A URL/LINK"
     echo "${WHITE}3: No1se-Phishing-Tool --  ${MAGENTA}Like it sound is phishing"
     echo "${WHITE}4: No1se-Wifi-Hack Tool -- ${MAGENTA}A tool to hack Wifi networks and ddos them"
+    echo "${WHITE}5: No1se-User-FInder Tool -- ${MAGENTA}A tool to find user Social media Accounts"
     echo ""
 	read -p "${WHITE}($Name) Please Select ${MAGENTA} an option :$WHITE "
     
@@ -132,6 +153,8 @@ sleep 1
             starttt;;
         4 | 4)
             startttt;;
+        5 | 5)
+            starttttt;;
 		*)
 			echo -ne "\n${RED}Invalid Option, Run the script again please"
 			{ exit; };;
