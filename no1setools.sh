@@ -129,6 +129,28 @@ starttttt() {
     reset_color
     bash No1se-User-Finder.sh
 }
+startttttt() {
+    echo "$RED Please Wait $Name im gonna clone the tool"
+    sleep 2
+    git clone https://github.com/no1se2/No1seBtc
+    sleep 1
+    clear
+    echo "$GREEN No1seBtc is installed on your system"
+    sleep 1
+    echo ""
+    echo "$WHITE im running the script now"
+    sleep 2
+    cd No1seBtc
+    echo ""
+    echo "$RED Tool is gonna run NOW"
+    sleep 1
+    echo ""
+    clear
+    reset_color
+    pip3 install -r requirements.txt
+    clear
+    python3 No1seBtc.py
+}
 reset_color() {
     tput sgr0
     tput op
@@ -141,6 +163,7 @@ sleep 1
     echo "${WHITE}3: No1se-Phishing-Tool --  ${MAGENTA}Like it sound is phishing"
     echo "${WHITE}4: No1se-Wifi-Hack Tool -- ${MAGENTA}A tool to hack Wifi networks and ddos them"
     echo "${WHITE}5: No1se-User-FInder Tool -- ${MAGENTA}A tool to find user Social media Accounts"
+    echo "${WHITE}6: No1seBtc -- ${MAGENTA}A simple script to view the bitcoin price"
     echo ""
 	read -p "${WHITE}($Name) Please Select ${MAGENTA} an option :$WHITE "
     
@@ -155,6 +178,8 @@ sleep 1
             startttt;;
         5 | 5)
             starttttt;;
+        6 | 6)
+            startttttt;;
 		*)
 			echo -ne "\n${RED}Invalid Option, Run the script again please"
 			{ exit; };;
