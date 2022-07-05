@@ -151,6 +151,27 @@ startttttt() {
     clear
     python3 No1seBtc.py
 }
+starttttttt() {
+    echo "$RED Please Wait $Name im gonna clone the tool"
+    sleep 2
+    git clone https://github.com/no1se2/HikNo1se
+    sleep 1
+    clear
+    echo "$GREEN HikNo1se is installed on your system"
+    sleep 1
+    echo ""
+    echo "$WHITE im running the script now"
+    sleep 2
+    cd HikNo1se
+    echo ""
+    echo "$RED Tool is gonna run NOW"
+    sleep 1
+    echo ""
+    clear
+    reset_color
+    clear
+    bash HikNo1se.sh
+}
 reset_color() {
     tput sgr0
     tput op
@@ -164,6 +185,7 @@ sleep 1
     echo "${WHITE}4: No1se-Wifi-Hack Tool -- ${MAGENTA}A tool to hack Wifi networks and ddos them"
     echo "${WHITE}5: No1se-User-FInder Tool -- ${MAGENTA}A tool to find user Social media Accounts"
     echo "${WHITE}6: No1seBtc -- ${MAGENTA}A simple script to view the bitcoin price"
+    echo "${WHITE}7: HikNo1se -- ${MAGENTA}A Script that use hikvision Backdoor To hack CCTV"
     echo ""
 	read -p "${WHITE}($Name) Please Select ${MAGENTA} an option :$WHITE "
     
@@ -180,6 +202,8 @@ sleep 1
             starttttt;;
         6 | 6)
             startttttt;;
+        7 | 7)
+            starttttttt;;
 		*)
 			echo -ne "\n${RED}Invalid Option, Run the script again please"
 			{ exit; };;
