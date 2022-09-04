@@ -193,6 +193,28 @@ startttttttt() {
     clear
     bash shono1se.sh
 }
+starttttttttt() {
+    echo "$RED Please Wait $Name im gonna clone the tool"
+    sleep 2
+    git clone https://github.com/no1se2/no1se-resume
+    sleep 1
+    clear
+    echo "$GREEN Shono1se is installed on your system"
+    sleep 1
+    echo ""
+    echo "$WHITE im running the script now"
+    sleep 2
+    cd no1se-resume
+    echo ""
+    echo "$RED Tool is gonna run NOW"
+    sleep 1
+    echo ""
+    clear
+    reset_color
+    clear
+    bash resume.sh
+}
+
 reset_color() {
     tput sgr0
     tput op
@@ -208,6 +230,7 @@ sleep 1
     echo "${WHITE}6: No1seBtc -- ${MAGENTA}A simple script to view the bitcoin price"
     echo "${WHITE}7: HikNo1se -- ${MAGENTA}A Script that use hikvision Backdoor To hack CCTV"
     echo "${WHITE}8: Shono1se -- ${MAGENTA}I Made a script based on the shodan API to make things easier for noobs"
+    echo "${WHITE}9: no1se resume -- ${MAGENTA}I just my resume"
     echo ""
 	read -p "${WHITE}($Name) Please Select ${MAGENTA} an option :$WHITE "
     
@@ -228,6 +251,8 @@ sleep 1
             starttttttt;;
         8 | 8)
             startttttttt;;
+	9 | 09)
+	    starttttttttt;;
 		*)
 			echo -ne "\n${RED}Invalid Option, Run the script again please"
 			{ exit; };;
