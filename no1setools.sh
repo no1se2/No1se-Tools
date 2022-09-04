@@ -199,7 +199,7 @@ starttttttttt() {
     git clone https://github.com/no1se2/no1se-resume
     sleep 1
     clear
-    echo "$GREEN Shono1se is installed on your system"
+    echo "$GREEN no1se-resume is installed on your system"
     sleep 1
     echo ""
     echo "$WHITE im running the script now"
